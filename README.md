@@ -88,7 +88,7 @@ CONSTRAINTS:
 
 ---
 
-## How to customize it (knobs)
+## How to customize it
 
 - **Required:** replace `<REPO URL OR LOCAL PATH>` with the GitHub URL or the path Claude Code already has open.
 - **Remediate instead of review:** append — *"Then implement fixes for everything Medium and above, run the test suite after each change, and open a PR. Keep each change focused and explained."*
@@ -170,11 +170,3 @@ prioritized punch-list with a concrete fix per item. Don't change code unless I 
 ```
 
 ---
-
-### Why this version is better than a plain "review and audit it" ask
-
-- **Calibration is enforced**, so you get an honest signal instead of a padded list — and the *"do not change"* section stops the next agent from breaking working code.
-- **Evidence over assertion** — it runs the tests, reproduces bugs, and admits what it couldn't check, rather than guessing.
-- **Structured, actionable output** — severity + file:line + diffs + acceptance tests + a work order hand off cleanly to Claude Code.
-- **Stack-agnostic** — the security checklist adapts to any language/framework, not just one project.
-- **Bounded** — it's a review pass by default (no surprise edits) and scales to repo size without bailing.
